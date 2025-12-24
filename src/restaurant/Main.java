@@ -1,20 +1,27 @@
 package restaurant;
 
 public class Main {
+
     public static void main(String[] args) {
 
-        Restaurant r1 = new Restaurant(1, "Ocean", "Seafood", 4.6);
-        Restaurant r2 = new Restaurant(2, "Italiano", "Italian", 3.9);
+        Restaurant restaurant = new Restaurant(1, "Ocean", "Main Street 10", 4.5);
 
-        System.out.println(r1);
-        System.out.println(r2);
+        MenuItem item1 = new MenuItem(1, "Pizza", 2500);
+        MenuItem item2 = new MenuItem(2, "Burger", 1800);
 
-        if (r1.getRating() > r2.getRating()) {
-            System.out.println(r1.getName() + " has higher rating");
+        Order order1 = new Order(101, item1, 2);
+        Order order2 = new Order(102, item2, 3);
+
+        System.out.println(restaurant);
+        System.out.println(item1);
+        System.out.println(item2);
+        System.out.println(order1);
+        System.out.println(order2);
+
+        if (order1.getTotalPrice() > order2.getTotalPrice()) {
+            System.out.println("Order 1 is more expensive");
         } else {
-            System.out.println(r2.getName() + " has higher rating");
+            System.out.println("Order 2 is more expensive");
         }
-
-        System.out.println("Is " + r1.getName() + " popular? " + r1.isPopular());
     }
 }

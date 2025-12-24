@@ -4,13 +4,13 @@ public class Restaurant {
 
     private int id;
     private String name;
-    private String cuisine;
+    private String address;
     private double rating;
 
-    public Restaurant(int id, String name, String cuisine, double rating) {
+    public Restaurant(int id, String name, String address, double rating) {
         this.id = id;
         this.name = name;
-        this.cuisine = cuisine;
+        this.address = address;
         this.rating = rating;
     }
 
@@ -18,24 +18,12 @@ public class Restaurant {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCuisine() {
-        return cuisine;
-    }
-
-    public void setCuisine(String cuisine) {
-        this.cuisine = cuisine;
+    public String getAddress() {
+        return address;
     }
 
     public double getRating() {
@@ -46,16 +34,12 @@ public class Restaurant {
         this.rating = rating;
     }
 
-    public boolean isPopular() {
-        return rating >= 4.0;
-    }
-
     @Override
     public String toString() {
         return "Restaurant{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", cuisine='" + cuisine + '\'' +
+                ", address='" + address + '\'' +
                 ", rating=" + rating +
                 '}';
     }
