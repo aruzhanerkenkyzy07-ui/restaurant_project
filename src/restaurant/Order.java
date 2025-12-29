@@ -1,27 +1,14 @@
 package restaurant;
 
-public class Order {
+public class Order extends Entity {
 
-    private int orderId;
     private MenuItem item;
     private int quantity;
 
-    public Order(int orderId, MenuItem item, int quantity) {
-        this.orderId = orderId;
+    public Order(int id, MenuItem item, int quantity) {
+        super(id);
         this.item = item;
         this.quantity = quantity;
-    }
-
-    public int getOrderId() {
-        return orderId;
-    }
-
-    public MenuItem getItem() {
-        return item;
-    }
-
-    public int getQuantity() {
-        return quantity;
     }
 
     public double getTotalPrice() {
@@ -29,12 +16,15 @@ public class Order {
     }
 
     @Override
+    public String getInfo() {
+        return item.getInfo() + ", quantity: " + quantity;
+    }
+
+    @Override
     public String toString() {
-        return "Order{" +
-                "orderId=" + orderId +
-                ", item=" + item.getName() +
+        return "Order{id=" + id +
+                ", item=" + item.getInfo() +
                 ", quantity=" + quantity +
-                ", totalPrice=" + getTotalPrice() +
-                '}';
+                ", total=" + getTotalPrice() + "}";
     }
 }

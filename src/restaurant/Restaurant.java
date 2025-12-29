@@ -1,46 +1,33 @@
 package restaurant;
 
-public class Restaurant {
+import java.util.ArrayList;
+import java.util.List;
 
-    private int id;
+public class Restaurant extends Entity {
+
     private String name;
-    private String address;
-    private double rating;
+    private List<Order> orders = new ArrayList<>();
 
-    public Restaurant(int id, String name, String address, double rating) {
-        this.id = id;
+    public Restaurant(int id, String name) {
+        super(id);
         this.name = name;
-        this.address = address;
-        this.rating = rating;
     }
 
-    public int getId() {
-        return id;
+    public void addOrder(Order order) {
+        orders.add(order);
     }
 
-    public String getName() {
-        return name;
+    public List<Order> getOrders() {
+        return orders;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public double getRating() {
-        return rating;
-    }
-
-    public void setRating(double rating) {
-        this.rating = rating;
+    @Override
+    public String getInfo() {
+        return "Restaurant: " + name;
     }
 
     @Override
     public String toString() {
-        return "Restaurant{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", address='" + address + '\'' +
-                ", rating=" + rating +
-                '}';
+        return "Restaurant{id=" + id + ", name='" + name + "', orders=" + orders.size() + "}";
     }
 }

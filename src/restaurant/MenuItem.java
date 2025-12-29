@@ -1,39 +1,27 @@
 package restaurant;
 
-public class MenuItem {
+public class MenuItem extends Entity {
 
-    private int id;
     private String name;
     private double price;
 
     public MenuItem(int id, String name, double price) {
-        this.id = id;
+        super(id);
         this.name = name;
         this.price = price;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    @Override
+    public String getInfo() {
+        return name + " - " + price;
     }
 
     @Override
     public String toString() {
-        return "MenuItem{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                '}';
+        return "MenuItem{id=" + id + ", name='" + name + "', price=" + price + "}";
     }
 }
