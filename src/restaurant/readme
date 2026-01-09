@@ -1,0 +1,33 @@
+# Restaurant Order Management System
+
+## Project Description
+This is a console-based Java application for managing restaurant orders.
+The project demonstrates Object-Oriented Programming principles such as
+abstraction, encapsulation, inheritance, and polymorphism.
+
+---
+
+## How to Run
+1. Open the project in IntelliJ IDEA.
+2. Make sure JDK is installed.
+3. Open Main.java.
+4. Run the main() method.
+5. View output in the console.
+
+---
+
+## Assignment 2 Requirements Implemented
+
+- Continued working with the Restaurant Order Management subject area
+- Applied data abstraction using an abstract class
+- Implemented encapsulation with private fields and methods
+- Used inheritance between classes
+- Demonstrated polymorphism by overriding methods
+- Organized data using collections
+- Implemented filtering, searching, and sorting
+- Overrode toString(), equals(), and hashCode() methods
+
+---
+
+## Author
+Aruzhan Yerkenkyzy
